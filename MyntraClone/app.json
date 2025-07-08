@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Myntra Clone",
-    "slug": "Myntra Clone",
+    "name": "MyntraClone",
+    "slug": "myntra-clone",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/myntra.jpg",
+    "icon": "./assets/images/myntra-fav.webp",
     "scheme": "myntra clone",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/myntra.jpg",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": false,
+      "package": "com.nitin.myntraproject"
     },
     "web": {
       "bundler": "metro",
@@ -33,10 +34,18 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "114512cc-10a3-4a9b-8d6a-a179159b70e9"
+      }
+    },
+    "owner": "nitincando1234"
   }
 }

@@ -37,13 +37,13 @@ export default function Bag() {
     
     useEffect(() => {
         fetchProduct();
-    }, [user]);
+    }, []);
 
     const fetchProduct = async () => {
         if(user) {
             try {
                 setIsLoading(true);
-                const bag = await axios.get(`https://myntra-clone-aado.onrender.com/\/bag/${user._id}`);
+                const bag = await axios.get(`https://myntra-clone-aado.onrender.com/bag/${user._id}`);
                 setBag(bag.data);
             } catch(error) {
                 console.log(error);
@@ -87,7 +87,7 @@ export default function Bag() {
 
     const handleDelete = async (itemid: any) =>{
         try {
-            await axios.delete(`https://myntra-clone-aado.onrender.com/bag/${itemid}`);
+            await axios.delete(`http://192.168.232.78:5000d}`);
             fetchProduct();
         } catch(error) {
             console.log(error);
