@@ -1,9 +1,9 @@
-import { useRouter } from "expo-router";
 import { Image, View, Text, TouchableOpacity, StyleSheet, ScrollView, ActivityIndicator } from "react-native";
 import { Minus, Plus, ShoppingBag, Trash2 } from "lucide-react-native";
 import { useAuth } from "@/context/AuthContext";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useRouter } from "expo-router";
 
 // const bagItems = [
 //   {
@@ -43,7 +43,7 @@ export default function Bag() {
         if(user) {
             try {
                 setIsLoading(true);
-                const bag = await axios.get(`http://192.168.150.78:5000/bag/${user._id}`);
+                const bag = await axios.get(`https://myntra-clone-aado.onrender.com/\/bag/${user._id}`);
                 setBag(bag.data);
             } catch(error) {
                 console.log(error);
@@ -87,7 +87,7 @@ export default function Bag() {
 
     const handleDelete = async (itemid: any) =>{
         try {
-            await axios.delete(`http://192.168.150.78:5000/bag/${itemid}`);
+            await axios.delete(`https://myntra-clone-aado.onrender.com/bag/${itemid}`);
             fetchProduct();
         } catch(error) {
             console.log(error);

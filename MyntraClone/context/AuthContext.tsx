@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }), []);    // to login when app starts
 
     const login = async (email: string, password: string) => {
-        const res = await axios.post("http://192.168.150.78:5000/user/login", {
+        const res = await axios.post("https://myntra-clone-aado.onrender.com/user/login", {
             email, password
         });
         const data = await res.data.user;
@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     };
 
     const signup = async (fullname: string, email: string, password: string) => {
-        const res = await axios.post("http://192.168.150.78:5000/user/signup", {
+        const res = await axios.post("https://myntra-clone-aado.onrender.com/user/signup", {
             fullname, email, password
         });
         const data = await res.data.user;

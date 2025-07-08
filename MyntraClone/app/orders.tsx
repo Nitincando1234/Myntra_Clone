@@ -130,7 +130,7 @@ export default function Orders() {
             try {
                 setIsLoading(true);
                 const product = await axios
-                    .get(`http://192.168.150.78:5000/order/user/${user._id}`);
+                    .get(`https://myntra-clone-aado.onrender.com/order/user/${user._id}`);
                 setOrder(product.data);
             } catch(error) {
                 console.log(error);

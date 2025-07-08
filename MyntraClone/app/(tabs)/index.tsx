@@ -106,7 +106,7 @@ export default function HomeScreen() {
     const fetchproduct = async () => {
           try {
             setIsLoading(true);
-            const product = await axios.get("http://192.168.150.78:5000/product");
+            const product = await axios.get("https://myntra-clone-aado.onrender.com/product");
             setProduct(product.data);
           } 
           catch(error) {
@@ -120,7 +120,7 @@ export default function HomeScreen() {
     const fetchcategories = async () => {
           try {
             setIsLoading(true);
-            const cat = await axios.get("http://192.168.150.78:5000/category");
+            const cat = await axios.get("https://myntra-clone-aado.onrender.com/category");
             setCategory(cat.data);
           } 
           catch(error) {

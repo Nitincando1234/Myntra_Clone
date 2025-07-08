@@ -40,7 +40,7 @@ export default function WishList() {
         if(user) {
             try {
                 setIsLoading(true);
-                const bag = await axios.get(`http://192.168.150.78:5000/wishlist/${user._id}`);
+                const bag = await axios.get(`https://myntra-clone-aado.onrender.com/wishlist/${user._id}`);
                 setWishlist(bag.data);
             } catch(error) {
                 console.log(error);
@@ -52,7 +52,7 @@ export default function WishList() {
     };
     const handleDelete = async (itemid: any) => {
         try {
-            await axios.delete(`http://192.168.150.78:5000/wishlist/${itemid}`);
+            await axios.delete(`https://myntra-clone-aado.onrender.com/wishlist/${itemid}`);
             fetchProduct();
         } catch(error) {
             console.log(error);
